@@ -1,4 +1,5 @@
-import stagingImage from "@/assets/staging-before-after.jpg";
+import kitchen1 from "@/assets/kitchen-1.jpg";
+import kitchen2 from "@/assets/kitchen-2.jpg";
 
 const StagingShowcase = () => {
   return (
@@ -17,14 +18,23 @@ const StagingShowcase = () => {
           </p>
         </div>
 
-        {/* Before/After Showcase */}
+        {/* Kitchen Portfolio Showcase */}
         <div className="max-w-6xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-lifted">
-            <img
-              src={stagingImage}
-              alt="Before and after home staging transformation"
-              className="w-full h-auto"
-            />
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="relative rounded-2xl overflow-hidden shadow-lifted group">
+              <img
+                src={kitchen1}
+                alt="Beautifully designed kitchen with sage green cabinets and warm wood accents"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-lifted group">
+              <img
+                src={kitchen2}
+                alt="Elegant modern kitchen featuring marble countertops and brass fixtures"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">

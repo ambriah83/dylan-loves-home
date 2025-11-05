@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Coastal Modern Color Palette - Soft Neutrals + Sage */
-    --background: 36 30% 97%;
+    /* Kitchen-Inspired Color Palette - Sage, Cream, Charcoal */
+    --background: 36 25% 97%;
     --foreground: 30 15% 25%;
 
     --card: 0 0% 100%;
@@ -18,40 +18,40 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 30 15% 25%;
 
-    /* Warm Sand - Primary Neutral */
-    --primary: 35 35% 85%;
+    /* Warm Cream - Primary Neutral */
+    --primary: 35 30% 88%;
     --primary-foreground: 30 20% 20%;
 
-    /* Soft Beige - Secondary Neutral */
-    --secondary: 38 30% 92%;
+    /* Soft Taupe - Secondary Neutral */
+    --secondary: 30 15% 75%;
     --secondary-foreground: 30 15% 25%;
 
-    /* Sage Green - Coastal Accent */
-    --accent: 150 25% 60%;
-    --accent-foreground: 150 30% 15%;
+    /* Sage Green - Accent from Kitchen Cabinets */
+    --accent: 145 22% 52%;
+    --accent-foreground: 0 0% 98%;
 
-    /* Muted Rose - Feminine CTA */
-    --rose: 345 55% 70%;
+    /* Muted Charcoal - Deep Accent */
+    --rose: 200 10% 35%;
     --rose-foreground: 0 0% 100%;
 
     /* Light Sage Background */
-    --muted: 150 15% 95%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 145 15% 92%;
+    --muted-foreground: 30 10% 40%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 90%;
-    --ring: 150 25% 60%;
+    --border: 145 12% 88%;
+    --input: 145 12% 90%;
+    --ring: 145 22% 52%;
 
     --radius: 0.75rem;
     
     /* Custom Design Tokens */
-    --gradient-coastal: linear-gradient(135deg, hsl(150 25% 60% / 0.15), hsl(35 35% 85% / 0.15));
-    --gradient-hero: linear-gradient(to bottom, hsl(30 20% 20% / 0.3), hsl(30 20% 20% / 0.5), hsl(36 30% 97% / 0.95));
-    --shadow-soft: 0 4px 20px hsl(30 15% 25% / 0.08);
-    --shadow-lifted: 0 10px 40px hsl(30 15% 25% / 0.12);
+    --gradient-coastal: linear-gradient(135deg, hsl(145 22% 52% / 0.2), hsl(35 30% 88% / 0.3));
+    --gradient-hero: linear-gradient(to bottom, hsl(145 22% 30% / 0.4), hsl(30 20% 20% / 0.5), hsl(36 25% 97% / 0.9));
+    --shadow-soft: 0 4px 20px hsl(145 22% 30% / 0.1);
+    --shadow-lifted: 0 10px 40px hsl(145 22% 30% / 0.15);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -72,39 +72,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 30 20% 12%;
-    --foreground: 36 30% 95%;
+    --background: 200 15% 12%;
+    --foreground: 36 25% 95%;
 
-    --card: 30 18% 16%;
-    --card-foreground: 36 30% 95%;
+    --card: 200 12% 16%;
+    --card-foreground: 36 25% 95%;
 
-    --popover: 30 18% 16%;
-    --popover-foreground: 36 30% 95%;
+    --popover: 200 12% 16%;
+    --popover-foreground: 36 25% 95%;
 
-    --primary: 35 25% 25%;
-    --primary-foreground: 36 30% 95%;
+    --primary: 35 20% 30%;
+    --primary-foreground: 36 25% 95%;
 
-    --secondary: 30 15% 22%;
-    --secondary-foreground: 36 30% 95%;
+    --secondary: 30 12% 25%;
+    --secondary-foreground: 36 25% 95%;
 
-    --accent: 150 25% 50%;
-    --accent-foreground: 36 30% 95%;
+    --accent: 145 22% 48%;
+    --accent-foreground: 0 0% 98%;
 
-    --rose: 345 50% 65%;
+    --rose: 200 10% 40%;
     --rose-foreground: 0 0% 100%;
 
-    --muted: 30 15% 20%;
+    --muted: 145 10% 22%;
     --muted-foreground: 35 15% 70%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 36 30% 95%;
+    --destructive-foreground: 36 25% 95%;
 
-    --border: 30 15% 25%;
-    --input: 30 15% 25%;
-    --ring: 150 25% 50%;
+    --border: 145 10% 28%;
+    --input: 145 10% 28%;
+    --ring: 145 22% 48%;
     
-    --gradient-coastal: linear-gradient(135deg, hsl(150 25% 35% / 0.2), hsl(35 25% 30% / 0.2));
-    --gradient-hero: linear-gradient(to bottom, hsl(30 20% 12% / 0.3), hsl(30 20% 12% / 0.7), hsl(30 20% 12%));
+    --gradient-coastal: linear-gradient(135deg, hsl(145 22% 35% / 0.3), hsl(35 20% 30% / 0.3));
+    --gradient-hero: linear-gradient(to bottom, hsl(145 22% 15% / 0.5), hsl(200 15% 12% / 0.8), hsl(200 15% 12%));
     --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
     --shadow-lifted: 0 10px 40px hsl(0 0% 0% / 0.4);
   }
