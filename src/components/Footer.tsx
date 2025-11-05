@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://www.instagram.com/dylsellsflorida" 
+                href="https://www.instagram.com/dylsellsflorida/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
@@ -23,16 +23,20 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=61551904689365" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a 
-                href="#" 
+                href="https://share.google/PgU6vzrBLsg6YzaaJ" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Google Reviews"
               >
                 <Linkedin size={20} />
               </a>
@@ -68,12 +72,14 @@ const Footer = () => {
             <ul className="space-y-3 font-poppins text-sm">
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-accent" />
-                <span>(727) XXX-XXXX</span>
+                <a href="tel:8136160846" className="hover:text-accent transition-colors">
+                  (813) 616-0846
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-accent" />
-                <a href="mailto:dylan@example.com" className="hover:text-accent transition-colors">
-                  dylan@example.com
+                <a href="mailto:dylsellsfl@gmail.com" className="hover:text-accent transition-colors">
+                  dylsellsfl@gmail.com
                 </a>
               </li>
             </ul>
