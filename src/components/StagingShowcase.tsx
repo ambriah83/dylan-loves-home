@@ -21,18 +21,18 @@ const StagingShowcase = () => {
         {/* Kitchen Portfolio Showcase */}
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="relative rounded-2xl overflow-hidden shadow-lifted group">
+            <div className="relative rounded-xl overflow-hidden shadow-lifted group aspect-[4/5]">
               <img
                 src={kitchen1}
                 alt="Beautifully designed kitchen with sage green cabinets and warm wood accents"
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-lifted group">
+            <div className="relative rounded-xl overflow-hidden shadow-lifted group aspect-[4/5]">
               <img
                 src={kitchen2}
                 alt="Elegant modern kitchen featuring marble countertops and brass fixtures"
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </div>
