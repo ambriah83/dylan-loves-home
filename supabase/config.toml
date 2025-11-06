@@ -1,1 +1,4 @@
 project_id = "fvqnialquvfadffcixvi"
+
+[functions.send-consultation]
+verify_jwt = false
