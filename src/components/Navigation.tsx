@@ -17,6 +17,14 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,8 +49,8 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins">
-              <Link to="/#contact">Let's Connect</Link>
+            <Button onClick={handleContactClick} className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins">
+              Let's Connect
             </Button>
           </div>
 
@@ -71,10 +79,8 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-poppins">
-              <Link to="/#contact" onClick={() => setIsOpen(false)}>
-                Let's Connect
-              </Link>
+            <Button onClick={handleContactClick} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-poppins">
+              Let's Connect
             </Button>
           </div>
         )}
