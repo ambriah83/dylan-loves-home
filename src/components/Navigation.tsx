@@ -42,7 +42,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins">
-              <Link to="/contact">Let's Connect</Link>
+              <Link to="/#contact">Let's Connect</Link>
             </Button>
           </div>
 
@@ -72,7 +72,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-poppins">
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <Link to="/#contact" onClick={() => setIsOpen(false)}>
                 Let's Connect
               </Link>
             </Button>
