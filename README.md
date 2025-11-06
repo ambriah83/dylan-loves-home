@@ -1,4 +1,10 @@
-# Welcome to your Lovable project
+# Dylan Lawrence Real Estate Website
+
+Tampa realtor specializing in first-time homebuyers and single moms. Lead-generation focused website with automated CRM integration.
+
+## 📚 Documentation
+
+**[View complete PRD and project documentation →](./docs/README.md)**
 
 ## Project info
 
