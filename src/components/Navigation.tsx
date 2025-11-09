@@ -31,7 +31,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <span className="font-playfair text-2xl font-semibold text-primary">
+            <span className="font-playfair text-2xl font-semibold text-foreground">
               Dylan Lawrence
             </span>
           </Link>
