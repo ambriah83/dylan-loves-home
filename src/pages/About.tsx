@@ -17,8 +17,8 @@ const About = () => {
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-lifted">
                   <img
-                    src={dylanPortrait}
-                    alt="Dylan Lawrence"
+                    src={dylansFamily}
+                    alt="Dylan Lawrence with her two sons"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -60,42 +60,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Family & Values */}
-        <section className="py-20 lg:py-32 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              {/* Content */}
-              <div className="space-y-6">
-                <p className="font-poppins text-accent font-semibold uppercase tracking-wider text-sm mb-3">
-                  Family First
-                </p>
-                <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary mb-6">
-                  A Single Mom Who Gets It
-                </h2>
-                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                  As a single mom to two amazing boys, I understand what it means to juggle priorities, budgets, and big life decisions. I know what it's like to worry about making the right choice — not just for today, but for your family's future.
-                </p>
-                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                  That's why I approach every transaction with empathy, structure, and transparency. I want my clients — especially women buying on their own — to feel safe, supported, and genuinely proud every step of the way.
-                </p>
-                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                  Your story matters. And your home should reflect the strength and courage it took to build it.
-                </p>
-              </div>
-
-              {/* Family Photo */}
-              <div className="relative order-first lg:order-last">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lifted">
-                  <img
-                    src={dylansFamily}
-                    alt="Dylan Lawrence with her two sons"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* My Promise */}
         <section className="py-20 lg:py-32 bg-background">
