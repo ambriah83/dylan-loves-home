@@ -40,15 +40,6 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
-              <a 
-                href="https://g.page/r/CUojRIUOiZ_XEBM/review" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
-                aria-label="Google Reviews"
-              >
-                <Star size={20} fill="currentColor" />
-              </a>
             </div>
           </div>
 
@@ -87,8 +78,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-accent" />
-                <a href="mailto:dylsellsfl@gmail.com" className="hover:text-accent transition-colors">
-                  dylsellsfl@gmail.com
+                <a href="mailto:dylan@dylansellsfloridahomes.com" className="hover:text-accent transition-colors">
+                  dylan@dylansellsfloridahomes.com
                 </a>
               </li>
             </ul>

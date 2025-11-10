@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselDots } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
@@ -168,6 +168,47 @@ const Testimonials = () => {
             ))}
           </div>
         )}
+
+        {/* View All Reviews Link */}
+        <div className="text-center mt-8">
+          <a 
+            href="https://maps.app.goo.gl/b438xaT79vG7PpBH6" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-poppins text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            <Star className="w-4 h-4" />
+            See all reviews on Google
+            <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+
+        {/* Leave a Review CTA */}
+        <div className="max-w-2xl mx-auto mt-16">
+          <div className="bg-accent/10 border border-accent/20 rounded-2xl p-8 md:p-12 text-center">
+            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Love Working with Dylan?
+            </h3>
+            <p className="font-poppins text-muted-foreground mb-8 text-lg">
+              Share your experience and help others find their dream home
+            </p>
+            <Button 
+              asChild
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-white font-poppins font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+            >
+              <a 
+                href="https://g.page/r/CUojRIUOiZ_XEBM/review" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3"
+              >
+                <Star className="w-5 h-5 fill-white" />
+                Leave a Google Review
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

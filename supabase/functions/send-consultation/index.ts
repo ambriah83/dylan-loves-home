@@ -44,7 +44,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Email to Dylan
     const adminEmailResponse = await resend.emails.send({
       from: "Dylan Sells FL <onboarding@resend.dev>",
-      to: ["dylsellsfl@gmail.com"],
+      to: ["dylan@dylansellsfloridahomes.com"],
       subject: `New Consultation Request from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
