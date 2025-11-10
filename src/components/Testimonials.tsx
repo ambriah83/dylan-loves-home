@@ -1,10 +1,30 @@
+import { useState } from "react";
 import { Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Button } from "@/components/ui/button";
 import chelseaImg from "@/assets/client-chelsea.jpg";
 import davidGeorgeImg from "@/assets/client-david-george.jpg";
 import paintedSoldierImg from "@/assets/client-painted-soldier.jpg";
 import jessicaMartinImg from "@/assets/client-jessica-martin.jpg";
 
 const Testimonials = () => {
+  const isMobile = useIsMobile();
+  const [expandedReviews, setExpandedReviews] = useState<number[]>([]);
+  const MAX_LENGTH = 150;
+
+  const toggleReview = (index: number) => {
+    setExpandedReviews(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + "...";
+  };
   const testimonials = [
     {
       name: "Chelsea",
@@ -51,40 +71,102 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-lifted transition-all duration-300"
-            >
-              <div className="flex flex-col items-center mb-6">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-primary/10"
-                />
-                <div className="flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
+        {isMobile ? (
+          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index}>
+                  <div className="bg-card p-8 rounded-2xl shadow-soft h-full flex flex-col">
+                    <div className="flex flex-col items-center mb-6">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name}
+                        className="w-48 h-48 rounded-full object-cover mb-4 border-4 border-primary/10"
+                      />
+                      <div className="flex gap-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 mb-6">
+                      <p className="font-poppins text-muted-foreground leading-relaxed text-sm">
+                        "{expandedReviews.includes(index) ? testimonial.content : truncateText(testimonial.content, MAX_LENGTH)}"
+                      </p>
+                      {testimonial.content.length > MAX_LENGTH && (
+                        <Button
+                          variant="link"
+                          onClick={() => toggleReview(index)}
+                          className="p-0 h-auto font-poppins text-accent text-sm mt-2"
+                        >
+                          {expandedReviews.includes(index) ? "Read less" : "Read more"}
+                        </Button>
+                      )}
+                    </div>
+                    
+                    <div className="border-t border-border pt-4 text-center">
+                      <p className="font-poppins font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="font-poppins text-sm text-muted-foreground">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-lifted transition-all duration-300 h-full flex flex-col"
+              >
+                <div className="flex flex-col items-center mb-6">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-48 h-48 rounded-full object-cover mb-4 border-4 border-primary/10"
+                  />
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="flex-1 mb-6">
+                  <p className="font-poppins text-muted-foreground leading-relaxed text-sm">
+                    "{expandedReviews.includes(index) ? testimonial.content : truncateText(testimonial.content, MAX_LENGTH)}"
+                  </p>
+                  {testimonial.content.length > MAX_LENGTH && (
+                    <Button
+                      variant="link"
+                      onClick={() => toggleReview(index)}
+                      className="p-0 h-auto font-poppins text-accent text-sm mt-2"
+                    >
+                      {expandedReviews.includes(index) ? "Read less" : "Read more"}
+                    </Button>
+                  )}
+                </div>
+                
+                <div className="border-t border-border pt-4 text-center">
+                  <p className="font-poppins font-semibold text-foreground">
+                    {testimonial.name}
+                  </p>
+                  <p className="font-poppins text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </p>
                 </div>
               </div>
-              
-              <p className="font-poppins text-muted-foreground mb-6 leading-relaxed text-sm">
-                "{testimonial.content}"
-              </p>
-              
-              <div className="border-t border-border pt-4 text-center">
-                <p className="font-poppins font-semibold text-foreground">
-                  {testimonial.name}
-                </p>
-                <p className="font-poppins text-sm text-muted-foreground">
-                  {testimonial.role}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
