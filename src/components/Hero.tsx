@@ -10,20 +10,24 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }}></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Homeownership on Your Terms
-            <span className="block text-4xl sm:text-5xl lg:text-6xl mt-4 text-accent">
+        <div className="max-w-2xl mx-auto space-y-12 animate-fade-in">
+          <div className="space-y-6">
+            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-snug">
+              Homeownership on Your Terms
+            </h1>
+            
+            <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-medium text-white/90 leading-relaxed">
               — Empowering Tampa Bay's first-time buyers, single women, and growing families.
-            </span>
-          </h1>
+            </h2>
+          </div>
           
-          <p className="font-poppins text-xl sm:text-2xl text-white/95 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-poppins text-lg sm:text-xl text-white/80 leading-relaxed">
             Let's navigate your journey together — whether it's your first home, a fresh start, or your family's next chapter.
           </p>
 
