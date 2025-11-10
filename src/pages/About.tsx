@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Award, Briefcase, GraduationCap, Heart } from "lucide-react";
 import dylanPortrait from "@/assets/dylan-portrait.jpg";
+import dylansFamily from "@/assets/dylans-family.jpg";
 
 const About = () => {
   return (
@@ -25,25 +26,72 @@ const About = () => {
 
               <div className="space-y-6">
                 <h1 className="font-playfair text-5xl lg:text-6xl font-bold text-primary">
-                  Meet Dylan
+                  Meet Dylan Lawrence
                 </h1>
-                <p className="font-poppins text-xl text-muted-foreground leading-relaxed">
-                  I'm Dylan Lawrence — a Tampa Bay Realtor®, certified home stager, 
-                  and proud single mom of two amazing boys.
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  When I bought my first home, I remember the mix of excitement and anxiety — the late-night Google searches, the questions I didn't know how to ask, the feeling that everyone else somehow knew more than I did. That experience changed how I see real estate forever.
                 </p>
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                  For over 20 years, I've called Florida home. I built my real estate 
-                  career while raising my family, learning firsthand how to balance 
-                  life's biggest priorities with grace, determination, and a whole lot 
-                  of heart.
+                  It showed me what was missing: someone who could make the process feel human — someone calm, honest, and patient enough to walk beside you, not ahead of you.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed font-semibold text-primary">
+                  That's why I became a Realtor®.
                 </p>
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                  Real estate isn't just about transactions for me — it's about 
-                  transformation. Whether you're a first-time buyer ready to invest 
-                  in yourself, a family relocating to our beautiful Tampa Bay area, 
-                  or an investor seeking your next opportunity, I'm here to make the 
-                  process feel easy, empowering, and even beautiful.
+                  Since 2004, I've proudly called Central Florida home and built my business helping first-time homebuyers, single women, and families across Tampa Bay navigate one of life's biggest milestones with confidence and clarity. My clients describe me as approachable, knowledgeable, and deeply invested — someone who listens first, teaches clearly, and makes sure no one feels lost or pressured along the way.
                 </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  As a single mom, I understand what it means to juggle priorities, budgets, and big decisions. That's why I approach every transaction with empathy, structure, and transparency. I want my clients — especially women buying on their own — to feel safe, supported, and proud every step of the way.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  My background in home staging and renovation helps me see potential and value where others might not, but my true focus is on people, not properties. I'm here to help you make choices that serve your goals, your lifestyle, and your peace of mind.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  Whether you're buying your very first home, selling to move forward, or relocating to Tampa Bay, I'll guide you through the process with the same care I'd give my own family — clear communication, smart strategy, and genuine heart.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  Because to me, real estate isn't about transactions; it's about transformation. It's about helping you move into the next chapter of your life feeling grounded, confident, and excited for what's next.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed font-semibold text-primary">
+                  Your story matters — and your home should reflect the strength and courage it took to build it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Family & Values */}
+        <section className="py-20 lg:py-32 bg-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Content */}
+              <div className="space-y-6">
+                <p className="font-poppins text-accent font-semibold uppercase tracking-wider text-sm mb-3">
+                  Family First
+                </p>
+                <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary mb-6">
+                  A Single Mom Who Gets It
+                </h2>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  As a single mom to two amazing boys, I understand what it means to juggle priorities, budgets, and big life decisions. I know what it's like to worry about making the right choice — not just for today, but for your family's future.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  That's why I approach every transaction with empathy, structure, and transparency. I want my clients — especially women buying on their own — to feel safe, supported, and genuinely proud every step of the way.
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  Your story matters. And your home should reflect the strength and courage it took to build it.
+                </p>
+              </div>
+
+              {/* Family Photo */}
+              <div className="relative order-first lg:order-last">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lifted">
+                  <img
+                    src={dylansFamily}
+                    alt="Dylan Lawrence with her two sons"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

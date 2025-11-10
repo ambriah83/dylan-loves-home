@@ -1,5 +1,6 @@
 import { Heart, Home, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import dylanPortrait from "@/assets/dylan-headshot.jpg";
 
 const AboutSection = () => {
@@ -55,14 +56,16 @@ const AboutSection = () => {
                 Your Partner in Finding Home
               </h2>
               <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
-                I'm Dylan Lawrence, a Tampa Bay Realtor® and single mom of two amazing boys. 
-                I built my career while raising my family, learning to balance life's priorities 
-                with grace and determination.
+                I'm Dylan Lawrence, a Tampa Bay Realtor® and proud single mom who believes every woman deserves to feel confident about where she lives — and how she got there.
+              </p>
+              <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
+                Buying your first home can feel overwhelming, but it doesn't have to. I guide first-time buyers and families through each step with calm, clarity, and care — so you always know what's coming next.
+              </p>
+              <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
+                With over 20 years in Central Florida and a deep understanding of our local communities, I help my clients make informed, empowered decisions — not rushed ones. Whether you're finding your very first home or building your next chapter, I'll make sure the process feels simple, supportive, and worth celebrating.
               </p>
               <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                I combine real estate expertise with certified home staging skills to help my 
-                clients see possibilities. Whether you're buying your first home, relocating to 
-                Florida, or investing in property — I'm here to make it beautiful and simple.
+                Because it's not just about buying a house — it's about building your foundation with confidence.
               </p>
             </div>
 
@@ -84,8 +87,9 @@ const AboutSection = () => {
             <Button 
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-poppins"
+              asChild
             >
-              Read My Full Story
+              <Link to="/about">Read My Full Story</Link>
             </Button>
           </div>
         </div>
