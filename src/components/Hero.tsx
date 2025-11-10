@@ -23,7 +23,7 @@ const Hero = () => {
             </h1>
             
             <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-medium text-white/90 leading-relaxed">
-              — Empowering Tampa Bay's first-time buyers, single women, and growing families.
+              Empowering Tampa Bay's first-time buyers, single women, and growing families.
             </h2>
           </div>
           
