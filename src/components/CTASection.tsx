@@ -29,10 +29,13 @@ const CTASection = () => {
               </a>
             </Button>
             <Button 
+              asChild
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins text-lg px-8 py-6"
             >
-              Explore Properties
+              <a href="https://dylan-lawrence.remax.com/" target="_blank" rel="noopener noreferrer">
+                Explore Properties
+              </a>
             </Button>
           </div>
 

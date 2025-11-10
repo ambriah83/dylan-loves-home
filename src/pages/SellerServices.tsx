@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StagingShowcase from "@/components/StagingShowcase";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Camera, Share2, Handshake, Key, Home } from "lucide-react";
@@ -35,6 +36,9 @@ const SellerServices = () => {
             </div>
           </div>
         </section>
+
+        {/* Design That Sells Section */}
+        <StagingShowcase />
 
         {/* The Selling Process */}
         <section className="py-20 lg:py-32 bg-muted/50">
