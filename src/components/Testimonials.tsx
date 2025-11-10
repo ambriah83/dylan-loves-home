@@ -1,24 +1,38 @@
 import { Star } from "lucide-react";
+import chelseaImg from "@/assets/client-chelsea.jpg";
+import davidGeorgeImg from "@/assets/client-david-george.jpg";
+import paintedSoldierImg from "@/assets/client-painted-soldier.jpg";
+import jessicaMartinImg from "@/assets/client-jessica-martin.jpg";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Martinez",
-      role: "First-Time Buyer",
-      content: "Dylan made my dream of homeownership a reality. As a single mom myself, I felt understood and supported every step of the way. She found me the perfect home in South Tampa.",
+      name: "Chelsea",
+      role: "Seller & Buyer",
+      content: "Dylan was nothing but amazing! I was selling my home to move to South Carolina. She was there every step of the way, answered all my crazy questions and walked me through the process. Not only did she sell my home but she stepped in when I was having a challenge with my realtor in SC and helped me find one that fit my needs.",
       rating: 5,
+      image: chelseaImg,
     },
     {
-      name: "Michael & Jennifer Chen",
-      role: "Relocating Family",
-      content: "Moving from out of state was stressful, but Dylan made it seamless. Her local knowledge and design eye helped us find a home we truly love in Palm Harbor. Couldn't recommend her more!",
+      name: "The Painted Soldier",
+      role: "Home Buyers",
+      content: "Dylan was absolutely amazing!! She handled my wife and my stress like a champ. She got us in the home that we wanted in 15 days, nearly from day one. Dylan is fantastic and I highly recommend her. Thank you Dylan, you are a Real Estate Rockstar.",
       rating: 5,
+      image: paintedSoldierImg,
     },
     {
-      name: "Robert Thompson",
-      role: "Seller & Investor",
-      content: "Dylan's staging expertise was invaluable. Our home sold in 8 days for $40K over asking! Her attention to detail and market knowledge is unmatched.",
+      name: "Jessica Martin",
+      role: "Out of State Seller",
+      content: "I hired Dylan to sell my house while I was living out of state. She was always super responsive and communicative, and she was honest, personable, fair, and straightforward. Dylan also personally worked tirelessly on getting the property ready for listing since I wasn't there to do it.",
       rating: 5,
+      image: jessicaMartinImg,
+    },
+    {
+      name: "David George",
+      role: "Remote Buyer",
+      content: "Dylan helped me find my dream home. As a remote buyer, I was very pleased with how easy it was to work with Dylan. She visited the homes for live video tours. After reviewing several options, we narrowed down and put in a successful offer! You won't find a harder working agent.",
+      rating: 5,
+      image: davidGeorgeImg,
     },
   ];
 
@@ -37,23 +51,30 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-lifted transition-all duration-300"
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                ))}
+              <div className="flex flex-col items-center mb-6">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name}
+                  className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-primary/10"
+                />
+                <div className="flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
               </div>
               
-              <p className="font-poppins text-muted-foreground mb-6 leading-relaxed">
+              <p className="font-poppins text-muted-foreground mb-6 leading-relaxed text-sm">
                 "{testimonial.content}"
               </p>
               
-              <div className="border-t border-border pt-4">
+              <div className="border-t border-border pt-4 text-center">
                 <p className="font-poppins font-semibold text-foreground">
                   {testimonial.name}
                 </p>
