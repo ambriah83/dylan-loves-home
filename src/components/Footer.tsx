@@ -41,7 +41,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://share.google/PgU6vzrBLsg6YzaaJ" 
+                href="https://g.page/r/CUojRIUOiZ_XEBM/review" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
