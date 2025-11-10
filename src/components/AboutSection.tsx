@@ -55,16 +55,16 @@ const AboutSection = () => {
               <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Your Partner in Finding Home
               </h2>
-              <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
+              <p className="font-poppins text-lg text-foreground leading-relaxed mb-4">
                 I'm <span className="text-accent font-semibold">Dylan Lawrence</span>, a <span className="text-accent font-semibold">Tampa Bay</span> Realtor® and proud single mom who believes every woman <span className="text-accent font-semibold">deserves to feel confident</span> about where she lives — and how she got there.
               </p>
-              <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
+              <p className="font-poppins text-lg text-foreground leading-relaxed mb-4">
                 Buying your first home can feel overwhelming, but it doesn't have to. I guide first-time buyers and families through each step with calm, clarity, and care — so you always know what's coming next.
               </p>
-              <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
+              <p className="font-poppins text-lg text-foreground leading-relaxed mb-4">
                 With over 20 years in Central Florida and a deep understanding of our local communities, I help my clients make informed, empowered decisions — not rushed ones. Whether you're finding your very first home or building your next chapter, I'll make sure the process feels simple, supportive, and worth celebrating.
               </p>
-              <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+              <p className="font-poppins text-lg text-foreground leading-relaxed">
                 Because it's not just about buying a house — it's about building your foundation with confidence.
               </p>
             </div>
@@ -77,7 +77,7 @@ const AboutSection = () => {
                   <h3 className="font-poppins font-semibold text-foreground">
                     {value.title}
                   </h3>
-                  <p className="font-poppins text-sm text-muted-foreground">
+                  <p className="font-poppins text-sm text-foreground">
                     {value.description}
                   </p>
                 </div>

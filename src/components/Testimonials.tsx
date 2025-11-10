@@ -66,7 +66,7 @@ const Testimonials = () => {
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
             What Clients Say
           </h2>
-          <p className="font-poppins text-lg text-muted-foreground">
+          <p className="font-poppins text-lg text-foreground">
             Real stories from real people who found home with my help.
           </p>
         </div>
@@ -91,7 +91,7 @@ const Testimonials = () => {
                     </div>
                     
                     <div className="flex-1 mb-6">
-                      <p className="font-poppins text-muted-foreground leading-relaxed text-sm">
+                      <p className="font-poppins text-foreground leading-relaxed text-sm">
                         "{expandedReviews.includes(index) ? testimonial.content : truncateText(testimonial.content, MAX_LENGTH)}"
                       </p>
                       {testimonial.content.length > MAX_LENGTH && (
@@ -109,7 +109,7 @@ const Testimonials = () => {
                       <p className="font-poppins font-semibold text-foreground">
                         {testimonial.name}
                       </p>
-                      <p className="font-poppins text-sm text-muted-foreground">
+                      <p className="font-poppins text-sm text-foreground">
                         {testimonial.role}
                       </p>
                     </div>
@@ -142,7 +142,7 @@ const Testimonials = () => {
                 </div>
                 
                 <div className="flex-1 mb-6">
-                  <p className="font-poppins text-muted-foreground leading-relaxed text-sm">
+                  <p className="font-poppins text-foreground leading-relaxed text-sm">
                     "{expandedReviews.includes(index) ? testimonial.content : truncateText(testimonial.content, MAX_LENGTH)}"
                   </p>
                   {testimonial.content.length > MAX_LENGTH && (
@@ -160,7 +160,7 @@ const Testimonials = () => {
                   <p className="font-poppins font-semibold text-foreground">
                     {testimonial.name}
                   </p>
-                  <p className="font-poppins text-sm text-muted-foreground">
+                  <p className="font-poppins text-sm text-foreground">
                     {testimonial.role}
                   </p>
                 </div>
@@ -175,7 +175,7 @@ const Testimonials = () => {
             href="https://maps.app.goo.gl/b438xaT79vG7PpBH6" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-poppins text-sm text-muted-foreground hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 font-poppins text-sm text-foreground hover:text-accent transition-colors"
           >
             <Star className="w-4 h-4" />
             See all reviews on Google
@@ -189,7 +189,7 @@ const Testimonials = () => {
             <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
               Love Working with Dylan?
             </h3>
-            <p className="font-poppins text-muted-foreground mb-8 text-lg">
+            <p className="font-poppins text-foreground mb-8 text-lg">
               Share your experience and help others find their dream home
             </p>
             <Button 

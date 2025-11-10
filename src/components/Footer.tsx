@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="font-playfair text-2xl font-bold">Dylan Lawrence</h3>
-            <p className="font-poppins text-sm text-muted-foreground leading-relaxed">
+            <p className="font-poppins text-sm text-foreground leading-relaxed">
               Tampa Bay Realtor® making real estate beautiful and simple.
             </p>
             <div className="flex gap-4">
@@ -87,7 +87,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 space-y-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-poppins text-muted-foreground">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-poppins text-foreground">
             <p>
               © {new Date().getFullYear()} Dylan Lawrence. All rights reserved.
             </p>
@@ -101,7 +101,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="text-xs font-poppins text-muted-foreground/80 text-center md:text-left">
+          <div className="text-xs font-poppins text-foreground/80 text-center md:text-left">
             <p className="mb-2">
               Dylan Lawrence | RE/MAX Realtec Group | Palm Harbor, Florida | License #SL3518205
             </p>

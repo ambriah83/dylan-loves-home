@@ -12,7 +12,7 @@ const StagingShowcase = () => {
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Design That Sells
           </h2>
-          <p className="font-poppins text-lg text-muted-foreground">
+          <p className="font-poppins text-lg text-foreground">
             As a certified home stager, I help sellers transform their homes to attract 
             top-dollar offers — and help buyers see the potential in every property.
           </p>
@@ -40,19 +40,19 @@ const StagingShowcase = () => {
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <div className="text-center space-y-3 p-6 bg-card rounded-xl shadow-soft">
               <p className="font-playfair text-4xl font-bold text-accent">87%</p>
-              <p className="font-poppins text-sm text-muted-foreground">
+              <p className="font-poppins text-sm text-foreground">
                 Staged homes sell faster than non-staged homes
               </p>
             </div>
             <div className="text-center space-y-3 p-6 bg-card rounded-xl shadow-soft">
               <p className="font-playfair text-4xl font-bold text-accent">20%</p>
-              <p className="font-poppins text-sm text-muted-foreground">
+              <p className="font-poppins text-sm text-foreground">
                 Average increase in sale price with professional staging
               </p>
             </div>
             <div className="text-center space-y-3 p-6 bg-card rounded-xl shadow-soft">
               <p className="font-playfair text-4xl font-bold text-accent">100%</p>
-              <p className="font-poppins text-sm text-muted-foreground">
+              <p className="font-poppins text-sm text-foreground">
                 Commitment to making your home look its absolute best
               </p>
             </div>

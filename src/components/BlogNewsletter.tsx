@@ -74,7 +74,7 @@ const BlogNewsletter = () => {
               Stay Informed
             </h2>
             
-            <p className="font-poppins text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+            <p className="font-poppins text-lg text-foreground mb-8 max-w-xl mx-auto">
               Get exclusive Tampa Bay real estate insights, market updates, and first-time buyer tips delivered to your inbox.
             </p>
             
@@ -104,7 +104,7 @@ const BlogNewsletter = () => {
               </Button>
             </form>
             
-            <p className="font-poppins text-xs text-muted-foreground mt-4">
+            <p className="font-poppins text-xs text-foreground mt-4">
               No spam, ever. Unsubscribe anytime.
             </p>
           </CardContent>
