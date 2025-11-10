@@ -10,6 +10,11 @@ import Communities from "./pages/Communities";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Resources from "./pages/Resources";
+import BuyerRepresentation from "./pages/BuyerRepresentation";
+import SellerServices from "./pages/SellerServices";
+import HomeStaging from "./pages/HomeStaging";
+import InvestmentProperties from "./pages/InvestmentProperties";
+import RelocationAssistance from "./pages/RelocationAssistance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +33,11 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/services/buyer-representation" element={<BuyerRepresentation />} />
+          <Route path="/services/seller-services" element={<SellerServices />} />
+          <Route path="/services/home-staging" element={<HomeStaging />} />
+          <Route path="/services/investment-properties" element={<InvestmentProperties />} />
+          <Route path="/services/relocation-assistance" element={<RelocationAssistance />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

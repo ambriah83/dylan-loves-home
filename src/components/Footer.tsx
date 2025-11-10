@@ -58,11 +58,11 @@ const Footer = () => {
           <div>
             <h4 className="font-poppins font-semibold mb-4">Services</h4>
             <ul className="space-y-2 font-poppins text-sm">
-              <li>Buyer Representation</li>
-              <li>Seller Services</li>
-              <li>Home Staging</li>
-              <li>Investment Properties</li>
-              <li>Relocation Assistance</li>
+              <li><Link to="/services/buyer-representation" className="hover:text-accent transition-colors">Buyer Representation</Link></li>
+              <li><Link to="/services/seller-services" className="hover:text-accent transition-colors">Seller Services</Link></li>
+              <li><Link to="/services/home-staging" className="hover:text-accent transition-colors">Home Staging</Link></li>
+              <li><Link to="/services/investment-properties" className="hover:text-accent transition-colors">Investment Properties</Link></li>
+              <li><Link to="/services/relocation-assistance" className="hover:text-accent transition-colors">Relocation Assistance</Link></li>
             </ul>
           </div>
 
