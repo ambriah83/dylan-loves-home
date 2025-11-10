@@ -41,7 +41,7 @@ const CTASection = () => {
 
           <div className="pt-8 flex flex-wrap justify-center gap-8 text-foreground/70">
             <div className="text-center">
-              <p className="font-playfair text-3xl font-bold">20+</p>
+              <p className="font-playfair text-3xl font-bold">5+</p>
               <p className="font-poppins text-sm">Years Experience</p>
             </div>
             <div className="text-center">
