@@ -57,7 +57,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-muted/50">
+    <section className="pt-12 pb-20 lg:pt-16 lg:pb-32 bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="font-poppins text-accent font-semibold uppercase tracking-wider text-sm mb-3">
