@@ -1,5 +1,4 @@
-import kitchen1 from "@/assets/kitchen-1.jpg";
-import kitchen2 from "@/assets/kitchen-2.jpg";
+import stagingComparison from "@/assets/staging-before-after.jpg";
 
 const StagingShowcase = () => {
   return (
@@ -18,22 +17,18 @@ const StagingShowcase = () => {
           </p>
         </div>
 
-        {/* Kitchen Portfolio Showcase */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="relative rounded-xl overflow-hidden shadow-lifted group aspect-[4/5]">
-              <img
-                src={kitchen1}
-                alt="Beautifully designed kitchen with sage green cabinets and warm wood accents"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="relative rounded-xl overflow-hidden shadow-lifted group aspect-[4/5]">
-              <img
-                src={kitchen2}
-                alt="Elegant modern kitchen featuring marble countertops and brass fixtures"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+        {/* Before/After Staging Showcase */}
+        <div className="max-w-5xl mx-auto">
+          <div className="relative rounded-xl overflow-hidden shadow-lifted mb-16">
+            <img
+              src={stagingComparison}
+              alt="Professional home staging before and after comparison showing dramatic transformation"
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-sm px-4 py-2 rounded-lg">
+              <p className="font-poppins text-sm italic text-foreground">
+                Small changes create dramatic results
+              </p>
             </div>
           </div>
 
