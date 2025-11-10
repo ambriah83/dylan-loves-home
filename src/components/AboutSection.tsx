@@ -56,7 +56,7 @@ const AboutSection = () => {
                 Your Partner in Finding Home
               </h2>
               <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
-                I'm Dylan Lawrence, a Tampa Bay Realtor® and proud single mom who believes every woman deserves to feel confident about where she lives — and how she got there.
+                I'm <span className="text-accent font-semibold">Dylan Lawrence</span>, a <span className="text-accent font-semibold">Tampa Bay</span> Realtor® and proud single mom who believes every woman <span className="text-accent font-semibold">deserves to feel confident</span> about where she lives — and how she got there.
               </p>
               <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
                 Buying your first home can feel overwhelming, but it doesn't have to. I guide first-time buyers and families through each step with calm, clarity, and care — so you always know what's coming next.
