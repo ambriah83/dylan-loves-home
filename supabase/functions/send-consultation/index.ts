@@ -1,7 +1,38 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+
+// Initialize Supabase client for rate limiting
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Input validation schema
+const consultationSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name too long"),
+  email: z.string().trim().email("Invalid email").max(255, "Email too long"),
+  phone: z.string().trim().min(1, "Phone is required").max(20, "Phone too long"),
+  propertyAddress: z.string().trim().max(500, "Address too long").optional(),
+  consultationType: z.enum(["selling", "buying", "both"], {
+    errorMap: () => ({ message: "Invalid consultation type" }),
+  }),
+  message: z.string().trim().max(2000, "Message too long").optional(),
+});
+
+// HTML escaping to prevent email template injection
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
+}
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -24,16 +55,66 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const {
-      name,
-      email,
-      phone,
-      propertyAddress,
-      consultationType,
-      message,
-    }: ConsultationRequest = await req.json();
+    // Parse and validate input
+    const body = await req.json();
+    const validationResult = consultationSchema.safeParse(body);
 
-    console.log("Processing consultation request for:", email);
+    if (!validationResult.success) {
+      console.log("Validation failed:", validationResult.error.issues);
+      return new Response(
+        JSON.stringify({
+          error: "Invalid input",
+          details: validationResult.error.issues.map((i) => i.message),
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    const { name, email, phone, propertyAddress, consultationType, message } =
+      validationResult.data;
+
+    // Get client IP for rate limiting
+    const clientIp =
+      req.headers.get("x-forwarded-for")?.split(",")[0] ||
+      req.headers.get("x-real-ip") ||
+      "unknown";
+
+    // Check rate limit: max 5 submissions per hour per IP
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    const { data: recentSubmissions, error: rateLimitError } = await supabase
+      .from("form_submissions")
+      .select("id")
+      .eq("ip_address", clientIp)
+      .eq("endpoint", "send-consultation")
+      .gte("submitted_at", oneHourAgo);
+
+    if (rateLimitError) {
+      console.error("Rate limit check failed:", rateLimitError);
+    } else if (recentSubmissions && recentSubmissions.length >= 5) {
+      console.log("Rate limit exceeded for IP:", clientIp);
+      return new Response(
+        JSON.stringify({
+          error: "Too many requests",
+          details: "Please wait before submitting another consultation request",
+        }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Record this submission for rate limiting
+    await supabase.from("form_submissions").insert({
+      ip_address: clientIp,
+      endpoint: "send-consultation",
+      submitted_at: new Date().toISOString(),
+    });
+
+    console.log("Processing consultation request");
 
     // Format consultation type for display
     const consultationTypeDisplay =
@@ -41,27 +122,27 @@ const handler = async (req: Request): Promise<Response> => {
         ? "Both Selling & Buying"
         : consultationType.charAt(0).toUpperCase() + consultationType.slice(1);
 
-    // Email to Dylan
+    // Email to Dylan (with sanitized user input)
     const adminEmailResponse = await resend.emails.send({
       from: "Dylan Sells FL <onboarding@resend.dev>",
       to: ["dylan@dylansellsfloridahomes.com"],
-      subject: `New Consultation Request from ${name}`,
+      subject: `New Consultation Request from ${escapeHtml(name)}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h1 style="color: #708238;">New Consultation Request</h1>
           
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h2 style="color: #333; margin-top: 0;">Contact Information</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></p>
-            ${propertyAddress ? `<p><strong>Property Address:</strong> ${propertyAddress}</p>` : ""}
+            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
+            <p><strong>Phone:</strong> <a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></p>
+            ${propertyAddress ? `<p><strong>Property Address:</strong> ${escapeHtml(propertyAddress)}</p>` : ""}
           </div>
 
           <div style="background-color: #e8f0e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h2 style="color: #333; margin-top: 0;">Consultation Details</h2>
-            <p><strong>Interested In:</strong> ${consultationTypeDisplay}</p>
-            ${message ? `<p><strong>Message:</strong></p><p style="white-space: pre-wrap;">${message}</p>` : ""}
+            <p><strong>Interested In:</strong> ${escapeHtml(consultationTypeDisplay)}</p>
+            ${message ? `<p><strong>Message:</strong></p><p style="white-space: pre-wrap;">${escapeHtml(message)}</p>` : ""}
           </div>
 
           <p style="color: #666; font-size: 14px; margin-top: 30px;">
@@ -71,9 +152,9 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Admin email sent:", adminEmailResponse);
+    console.log("Admin email sent successfully");
 
-    // Auto-reply to user
+    // Auto-reply to user (with sanitized user input)
     const userEmailResponse = await resend.emails.send({
       from: "Dylan Sells FL <onboarding@resend.dev>",
       to: [email],
@@ -82,14 +163,14 @@ const handler = async (req: Request): Promise<Response> => {
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h1 style="color: #708238;">Thank You for Your Request!</h1>
           
-          <p>Hi ${name},</p>
+          <p>Hi ${escapeHtml(name)},</p>
           
           <p>Thank you for reaching out! I've received your consultation request and will get back to you within 24 hours.</p>
           
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h2 style="color: #333; margin-top: 0;">What You Requested</h2>
-            <p><strong>Consultation Type:</strong> ${consultationTypeDisplay}</p>
-            ${propertyAddress ? `<p><strong>Property:</strong> ${propertyAddress}</p>` : ""}
+            <p><strong>Consultation Type:</strong> ${escapeHtml(consultationTypeDisplay)}</p>
+            ${propertyAddress ? `<p><strong>Property:</strong> ${escapeHtml(propertyAddress)}</p>` : ""}
           </div>
 
           <p>In the meantime, feel free to:</p>
@@ -116,7 +197,7 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("User confirmation email sent:", userEmailResponse);
+    console.log("User confirmation email sent successfully");
 
     return new Response(
       JSON.stringify({
