@@ -3,10 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Eye, TrendingUp, Clock, Heart, Sparkles, Users } from "lucide-react";
-import stagingBefore1 from "@/assets/staging-before-1.png";
-import stagingAfter1 from "@/assets/staging-after-1.png";
-import stagingBefore2 from "@/assets/staging-before-2.jpg";
-import stagingAfter2 from "@/assets/staging-after-2.png";
+import stagingSideBySide from "@/assets/staging-side-by-side.jpg";
 
 const HomeStaging = () => {
   return (
@@ -42,71 +39,19 @@ const HomeStaging = () => {
         {/* Before/After Image */}
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground text-center mb-12">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground text-center mb-8">
                 The Power of Staging
               </h2>
-              
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                {/* Comparison Set 1 */}
-                <div className="space-y-4">
-                  <div className="relative rounded-xl overflow-hidden shadow-lifted">
-                    <img
-                      src={stagingBefore1}
-                      alt="Living room before professional staging - cluttered and dated"
-                      className="w-full h-[300px] object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-destructive/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                      <p className="font-poppins text-sm font-bold text-destructive-foreground uppercase tracking-wider">
-                        Before
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative rounded-xl overflow-hidden shadow-lifted">
-                    <img
-                      src={stagingAfter1}
-                      alt="Living room after professional staging - clean, modern, and inviting"
-                      className="w-full h-[300px] object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                      <p className="font-poppins text-sm font-bold text-accent-foreground uppercase tracking-wider">
-                        After
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Comparison Set 2 */}
-                <div className="space-y-4">
-                  <div className="relative rounded-xl overflow-hidden shadow-lifted">
-                    <img
-                      src={stagingBefore2}
-                      alt="Bedroom before professional staging - messy and uninviting"
-                      className="w-full h-[300px] object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-destructive/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                      <p className="font-poppins text-sm font-bold text-destructive-foreground uppercase tracking-wider">
-                        Before
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative rounded-xl overflow-hidden shadow-lifted">
-                    <img
-                      src={stagingAfter2}
-                      alt="Bedroom after professional staging - organized, styled, and move-in ready"
-                      className="w-full h-[300px] object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                      <p className="font-poppins text-sm font-bold text-accent-foreground uppercase tracking-wider">
-                        After
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="rounded-2xl overflow-hidden shadow-lifted">
+                <img 
+                  src={stagingSideBySide} 
+                  alt="Before and after home staging transformation showing dramatic improvement from cluttered to professionally styled"
+                  className="w-full h-auto"
+                />
               </div>
-
-              <p className="font-poppins text-center text-muted-foreground italic text-lg">
-                Professional staging transforms ordinary spaces into buyer magnets
+              <p className="font-poppins text-center text-muted-foreground italic mt-6">
+                Small changes create dramatic results
               </p>
             </div>
           </div>
