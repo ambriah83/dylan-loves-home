@@ -38,7 +38,7 @@ const About = () => {
                   That's why I became a Realtor®.
                 </p>
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                  Since 2004, I've proudly called Central Florida home and built my business helping first-time homebuyers, single women, and families across Tampa Bay navigate one of life's biggest milestones with confidence and clarity. My clients describe me as approachable, knowledgeable, and deeply invested — someone who listens first, teaches clearly, and makes sure no one feels lost or pressured along the way.
+                  Since 2004, I've proudly called Central Florida home, and with over 5 years of real estate experience, I've built my business helping first-time homebuyers, single women, and families across Tampa Bay navigate one of life's biggest milestones with confidence and clarity. My clients describe me as approachable, knowledgeable, and deeply invested — someone who listens first, teaches clearly, and makes sure no one feels lost or pressured along the way.
                 </p>
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
                   As a single mom, I understand what it means to juggle priorities, budgets, and big decisions. That's why I approach every transaction with empathy, structure, and transparency. I want my clients — especially women buying on their own — to feel safe, supported, and proud every step of the way.
@@ -156,9 +156,9 @@ const About = () => {
                   First-Time Buyers
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
-                  Especially single women and single parents ready to invest in 
-                  themselves and build equity. I've been there — I know what it 
-                  takes, and I'll guide you every step.
+                  Navigating the process of buying your first home with confidence and clarity. 
+                  I'll walk you through every step — from pre-approval to closing — so you feel 
+                  informed, supported, and excited about this major milestone.
                 </p>
               </div>
 
@@ -170,7 +170,7 @@ const About = () => {
                   Single Women & Moms
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
-                  Women buying on their own and single parents ready to build stability 
+                  Women buying or selling on their own and single parents ready to build stability 
                   and create lasting security. I've walked this path myself — I understand 
                   the unique challenges and will guide you with clarity and care.
                 </p>
