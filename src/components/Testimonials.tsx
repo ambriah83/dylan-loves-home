@@ -81,7 +81,7 @@ const Testimonials = () => {
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name}
-                        className="w-48 h-48 rounded-full object-cover mb-4 border-4 border-primary/10"
+                        className="w-48 h-48 rounded-full object-cover object-top mb-4 border-4 border-primary/10"
                       />
                       <div className="flex gap-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -131,7 +131,7 @@ const Testimonials = () => {
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name}
-                    className="w-48 h-48 rounded-full object-cover mb-4 border-4 border-primary/10"
+                    className="w-48 h-48 rounded-full object-cover object-top mb-4 border-4 border-primary/10"
                   />
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
