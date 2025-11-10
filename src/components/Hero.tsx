@@ -19,17 +19,13 @@ const Hero = () => {
         <div className="max-w-2xl mx-auto space-y-12 animate-fade-in">
           <div className="space-y-6">
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-snug">
-              Homeownership on Your Terms
+              Your next move, made simple.
             </h1>
             
-            <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-medium text-white/90 leading-relaxed">
-              Empowering Tampa Bay's first-time buyers, single women, and growing families.
+            <h2 className="font-poppins text-xl sm:text-2xl lg:text-3xl font-normal text-white/90 leading-relaxed">
+              From first home to forever home, I'll help you get there with ease.
             </h2>
           </div>
-          
-          <p className="font-poppins text-lg sm:text-xl text-white/80 leading-relaxed">
-            Let's navigate your journey together — whether it's your first home, a fresh start, or your family's next chapter.
-          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a 
