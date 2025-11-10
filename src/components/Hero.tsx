@@ -41,13 +41,19 @@ const Hero = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 font-poppins text-lg px-8 py-6"
+            <a 
+              href="https://home-value-estimates.remax.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              Get Your Home Value
-            </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 font-poppins text-lg px-8 py-6"
+              >
+                Get Your Home Value
+              </Button>
+            </a>
           </div>
 
           {/* Scroll Indicator */}
