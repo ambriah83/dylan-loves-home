@@ -17,14 +17,14 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Real Estate Made Beautiful
+            Homeownership on Your Terms
             <span className="block text-4xl sm:text-5xl lg:text-6xl mt-4 text-accent">
-              — and Simple.
+              — Empowering Tampa Bay's first-time buyers, single women, and growing families.
             </span>
           </h1>
           
           <p className="font-poppins text-xl sm:text-2xl text-white/95 max-w-2xl mx-auto leading-relaxed">
-            Guiding Tampa Bay buyers, sellers, and investors with heart and design expertise.
+            Let's navigate your journey together — whether it's your first home, a fresh start, or your family's next chapter.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">

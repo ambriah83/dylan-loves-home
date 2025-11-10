@@ -9,7 +9,7 @@ const CTASection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground">
-            Let's Make Your Move Beautiful
+            Your Keys Are Closer Than You Think
           </h2>
           
           <p className="font-poppins text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
