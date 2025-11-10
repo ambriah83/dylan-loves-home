@@ -184,9 +184,9 @@ const About = () => {
                   Relocating Families
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
-                  Moving to Tampa Bay from out of state? I'll be your trusted local 
-                  guide, helping you find the perfect neighborhood, schools, and 
-                  community for your family.
+                  Moving to Tampa Bay from out of state? With over 20 years living here, 
+                  I know the area inside and out. I'll help you find neighborhoods, schools, 
+                  and communities that match your family's personality and lifestyle perfectly.
                 </p>
               </div>
             </div>
