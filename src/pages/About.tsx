@@ -25,7 +25,7 @@ const About = () => {
               </div>
 
               <div className="space-y-6">
-                <h1 className="font-playfair text-5xl lg:text-6xl font-bold text-primary">
+                <h1 className="font-playfair text-5xl lg:text-6xl font-bold text-foreground">
                   Meet Dylan Lawrence
                 </h1>
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
@@ -34,7 +34,7 @@ const About = () => {
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
                   It showed me what was missing: someone who could make the process feel human — someone calm, honest, and patient enough to walk beside you, not ahead of you.
                 </p>
-                <p className="font-poppins text-lg text-muted-foreground leading-relaxed font-semibold text-primary">
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed font-semibold text-accent">
                   That's why I became a Realtor®.
                 </p>
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
@@ -52,7 +52,7 @@ const About = () => {
                 <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
                   Because to me, real estate isn't about transactions; it's about transformation. It's about helping you move into the next chapter of your life feeling grounded, confident, and excited for what's next.
                 </p>
-                <p className="font-poppins text-lg text-muted-foreground leading-relaxed font-semibold text-primary">
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed font-semibold text-accent">
                   Your story matters — and your home should reflect the strength and courage it took to build it.
                 </p>
               </div>
@@ -65,7 +65,7 @@ const About = () => {
         <section className="py-20 lg:py-32 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary">
+              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground">
                 My Promise to You
               </h2>
               <p className="font-playfair text-2xl italic text-accent">
@@ -84,14 +84,14 @@ const About = () => {
         {/* Experience & Credentials */}
         <section className="py-20 lg:py-32 bg-muted/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary text-center mb-16">
+            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground text-center mb-16">
               Experience & Expertise
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               <div className="bg-card p-8 rounded-2xl shadow-soft text-center space-y-4">
                 <Award className="w-12 h-12 text-accent mx-auto" />
-                <h3 className="font-poppins font-semibold text-primary text-lg">
+                <h3 className="font-poppins font-semibold text-foreground text-lg">
                   Licensed Realtor®
                 </h3>
                 <p className="font-poppins text-sm text-muted-foreground">
@@ -103,7 +103,7 @@ const About = () => {
 
               <div className="bg-card p-8 rounded-2xl shadow-soft text-center space-y-4">
                 <GraduationCap className="w-12 h-12 text-accent mx-auto" />
-                <h3 className="font-poppins font-semibold text-primary text-lg">
+                <h3 className="font-poppins font-semibold text-foreground text-lg">
                   Certified Home Stager
                 </h3>
                 <p className="font-poppins text-sm text-muted-foreground">
@@ -115,7 +115,7 @@ const About = () => {
 
               <div className="bg-card p-8 rounded-2xl shadow-soft text-center space-y-4">
                 <Briefcase className="w-12 h-12 text-accent mx-auto" />
-                <h3 className="font-poppins font-semibold text-primary text-lg">
+                <h3 className="font-poppins font-semibold text-foreground text-lg">
                   20+ Years
                 </h3>
                 <p className="font-poppins text-sm text-muted-foreground">
@@ -127,7 +127,7 @@ const About = () => {
 
               <div className="bg-card p-8 rounded-2xl shadow-soft text-center space-y-4">
                 <Heart className="w-12 h-12 text-accent mx-auto" />
-                <h3 className="font-poppins font-semibold text-primary text-lg">
+                <h3 className="font-poppins font-semibold text-foreground text-lg">
                   Family First
                 </h3>
                 <p className="font-poppins text-sm text-muted-foreground">
@@ -143,7 +143,7 @@ const About = () => {
         {/* Who I Help */}
         <section className="py-20 lg:py-32 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary text-center mb-16">
+            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground text-center mb-16">
               Who I Love to Help
             </h2>
 
@@ -152,7 +152,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center">
                   <span className="font-playfair text-2xl font-bold text-accent">1</span>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-primary">
+                <h3 className="font-poppins font-semibold text-xl text-foreground">
                   First-Time Buyers
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
@@ -166,7 +166,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center">
                   <span className="font-playfair text-2xl font-bold text-accent">2</span>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-primary">
+                <h3 className="font-poppins font-semibold text-xl text-foreground">
                   Relocating Families
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
@@ -180,7 +180,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center">
                   <span className="font-playfair text-2xl font-bold text-accent">3</span>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-primary">
+                <h3 className="font-poppins font-semibold text-xl text-foreground">
                   Investors & Sellers
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">

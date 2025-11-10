@@ -9,7 +9,7 @@ const StagingShowcase = () => {
           <p className="font-poppins text-accent font-semibold uppercase tracking-wider text-sm mb-3">
             The Power of Presentation
           </p>
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary mb-6">
+          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Design That Sells
           </h2>
           <p className="font-poppins text-lg text-muted-foreground">

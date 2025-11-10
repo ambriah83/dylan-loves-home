@@ -52,7 +52,7 @@ const AboutSection = () => {
               <p className="font-poppins text-accent font-semibold uppercase tracking-wider text-sm mb-3">
                 Meet Dylan
               </p>
-              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary mb-6">
+              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Your Partner in Finding Home
               </h2>
               <p className="font-poppins text-lg text-muted-foreground leading-relaxed mb-4">
@@ -74,7 +74,7 @@ const AboutSection = () => {
               {values.map((value, index) => (
                 <div key={index} className="space-y-2">
                   <value.icon className="w-8 h-8 text-accent" />
-                  <h3 className="font-poppins font-semibold text-primary">
+                  <h3 className="font-poppins font-semibold text-foreground">
                     {value.title}
                   </h3>
                   <p className="font-poppins text-sm text-muted-foreground">
