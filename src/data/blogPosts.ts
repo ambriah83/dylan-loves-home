@@ -10,6 +10,129 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "first-time-buyer-programs-tampa",
+    title: "First-Time Home Buyer Programs in Tampa: Your Complete Guide to Grants and Assistance",
+    date: "2025-10-25",
+    excerpt: "Thinking about buying your first home in Tampa? You're not alone — and you have more help available than you might think. From Florida Hometown Heroes to FHA loans and local Tampa programs, discover the grants and assistance that can make homeownership a reality.",
+    readTime: "7 min read",
+    category: "First-Time Buyers",
+    content: `
+Thinking about buying your first home in Tampa? You're not alone — and you have more help available than you might think.
+
+The truth is, there are dozens of programs designed specifically to help first-time homebuyers in Florida, and many people miss out simply because they don't know these options exist.
+
+As a Tampa-based real estate agent, I walk first-time buyers through these programs every week. My goal is simple: help you understand what's available so you can make an informed, confident decision.
+
+Let's break down the best first-time home buyer programs in Tampa — and how to qualify.
+
+## Florida Hometown Heroes Program
+
+💡 **What it is:** A special financing program for frontline workers, educators, and military members.
+
+The Florida Hometown Heroes Housing Program offers eligible buyers up to $35,000 in down payment and closing cost assistance — and it comes as a **0% interest loan** that you don't have to pay back unless you sell or refinance within a certain timeframe.
+
+**Who qualifies:**
+- Educators
+- Healthcare workers
+- First responders (police, fire, EMT)
+- Active military, veterans, and their families
+- Childcare employees
+- And many other frontline professions
+
+This program is a game-changer if you qualify. It's one of the most generous assistance programs in Florida, and it's designed to help people who serve our communities.
+
+👉 **How to apply:** You'll need to work with an approved lender who participates in the Hometown Heroes program. I can connect you with trusted lenders who specialize in this.
+
+## FHA Loans: The Go-To for First-Time Buyers
+
+💡 **What it is:** A federally-backed mortgage with lower down payment requirements and more flexible credit standards.
+
+FHA loans are incredibly popular with first-time buyers because they only require a **3.5% down payment** — and your credit score doesn't have to be perfect to qualify.
+
+**Key benefits:**
+- Down payment as low as 3.5%
+- Credit scores as low as 580 may qualify
+- Sellers can contribute up to 6% toward your closing costs
+- Lower interest rates compared to conventional loans for buyers with lower credit
+
+**Things to keep in mind:**
+- You'll pay mortgage insurance (MIP) for the life of the loan unless you refinance later
+- There are loan limits based on the county (in Hillsborough County, the 2025 limit is around $498,257 for a single-family home)
+
+FHA loans are ideal if you have solid income but limited savings or a credit score that's still building.
+
+## VA Loans: For Veterans and Active Military
+
+💡 **What it is:** A no-down-payment loan exclusively for military members, veterans, and eligible spouses.
+
+If you've served in the military, the VA loan is hands down one of the best mortgage options available.
+
+**Key benefits:**
+- **Zero down payment** required
+- No private mortgage insurance (PMI)
+- Competitive interest rates
+- More flexible credit requirements
+
+The VA loan is one of the most powerful tools for military families looking to buy in Tampa. And yes — you can use it multiple times throughout your life.
+
+## USDA Loans: For Homes in Eligible Rural Areas
+
+💡 **What it is:** A zero-down-payment loan for buyers purchasing in designated rural or suburban areas.
+
+You might be surprised to learn that parts of the Tampa Bay area actually qualify for USDA loans. These loans are designed for low-to-moderate income buyers and offer **no down payment** if you meet the income limits.
+
+**Who qualifies:**
+- Properties must be in USDA-eligible areas (check the USDA map online)
+- Household income must fall within the program's limits (typically up to 115% of the area median income)
+
+This program is perfect if you're open to living in the suburbs or slightly outside the city center.
+
+## Tampa Bay Community Development Corporation (CDC)
+
+The Tampa Bay CDC offers down payment assistance to eligible first-time buyers in Hillsborough County. They provide grants and low-interest loans to help cover your down payment and closing costs.
+
+**Key benefits:**
+- Down payment assistance up to 5% of the purchase price
+- Homebuyer education courses (often required for assistance programs)
+- Dedicated to helping low-to-moderate income families
+
+👉 **How to apply:** Visit the Tampa Bay CDC website or ask me to connect you with their team.
+
+## City of Tampa First-Time Homebuyer Program
+
+The City of Tampa occasionally offers first-time homebuyer assistance programs, including forgivable loans and grants for qualified buyers purchasing within city limits.
+
+These programs change based on funding availability, so it's important to check current offerings — or work with an agent (like me) who stays up-to-date on what's available.
+
+## Combining Programs: How to Stack Assistance
+
+Here's something most people don't realize: **you can often combine multiple programs** to maximize your assistance.
+
+For example:
+- Use an FHA loan (3.5% down) + Florida Hometown Heroes assistance ($35,000) + seller contributions (up to 6%)
+- Or combine a conventional loan with local Tampa CDC down payment assistance
+
+The key is working with a lender and agent who understand how these programs fit together — and who can help you structure the best deal.
+
+## How to Get Started
+
+Here's my recommended roadmap for first-time buyers in Tampa:
+
+1. **Talk to a lender first** — Get pre-approved so you know your budget and which programs you qualify for.
+2. **Explore your assistance options** — Don't leave money on the table. Ask about Hometown Heroes, FHA, VA, USDA, and local programs.
+3. **Take a homebuyer education course** — Many assistance programs require this, and it's genuinely helpful.
+4. **Work with a local agent** — Someone who knows Tampa, understands these programs, and will advocate for you every step of the way.
+
+## Final Thoughts
+
+Buying your first home in Tampa is more achievable than you think — especially when you know what resources are available.
+
+Whether you're a teacher, a nurse, a veteran, or just starting your career, there's a program designed to help you. And I'm here to help you navigate all of it.
+
+Ready to explore your options? Let's talk.
+    `
+  },
+  {
     slug: "hidden-costs-first-time-buyers",
     title: "5 Hidden Costs First-Time Buyers Forget (and How to Budget for Them)",
     date: "2025-11-09",
