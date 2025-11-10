@@ -29,10 +29,10 @@ const Blog = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
             Insights & Advice
           </h1>
-          <p className="font-poppins text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-poppins text-lg sm:text-xl lg:text-xl font-light text-foreground max-w-2xl mx-auto">
             Expert guidance for first-time buyers, single women, and families navigating the Tampa Bay real estate market
           </p>
         </div>
