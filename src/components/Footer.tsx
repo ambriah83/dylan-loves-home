@@ -49,7 +49,6 @@ const Footer = () => {
             <ul className="space-y-2 font-poppins text-sm">
               <li><a href="https://dylansellsfloridahomes.com/about" className="hover:text-accent transition-colors">About Dylan</a></li>
               <li><Link to="/properties" className="hover:text-accent transition-colors">Search Properties</Link></li>
-              <li><Link to="/communities" className="hover:text-accent transition-colors">Communities</Link></li>
               <li><Link to="/resources" className="hover:text-accent transition-colors">Resources</Link></li>
             </ul>
           </div>

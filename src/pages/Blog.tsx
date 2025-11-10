@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlogNewsletter from "@/components/BlogNewsletter";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -76,6 +77,8 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      <BlogNewsletter />
 
       <Footer />
     </div>
