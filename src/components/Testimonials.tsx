@@ -3,10 +3,10 @@ import { Star, ExternalLink } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselDots } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
-import chelseaImg from "@/assets/client-chelsea.jpg";
-import davidGeorgeImg from "@/assets/client-david-george.jpg";
-import paintedSoldierImg from "@/assets/client-painted-soldier.jpg";
-import jessicaMartinImg from "@/assets/client-jessica-martin.jpg";
+import chelseaImg from "@/assets/client-chelsea-new.jpg";
+import davidGeorgeImg from "@/assets/client-david-george-new.jpg";
+import paintedSoldierImg from "@/assets/client-painted-soldier-new.png";
+import jessicaMartinImg from "@/assets/client-jessica-martin-new.jpg";
 
 const Testimonials = () => {
   const isMobile = useIsMobile();
