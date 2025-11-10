@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Linkedin, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail, Phone, Star } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -32,13 +32,22 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
+                href="https://www.linkedin.com/in/dylan-lawrence-9b3932141/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a 
                 href="https://share.google/PgU6vzrBLsg6YzaaJ" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
                 aria-label="Google Reviews"
               >
-                <Linkedin size={20} />
+                <Star size={20} fill="currentColor" />
               </a>
             </div>
           </div>
