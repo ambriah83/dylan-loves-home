@@ -92,18 +92,13 @@ const Resources = () => {
               I'm here to help you every step of the way. Let's connect and discuss how I can help you achieve your real estate goals.
             </p>
             <Button 
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#contact';
-                }
-              }}
+              asChild
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins"
             >
-              Schedule a Consultation
+              <a href="https://calendar.app.google/SWazGvdTsxQ5QhQx5" target="_blank" rel="noopener noreferrer">
+                Schedule a Consultation
+              </a>
             </Button>
           </div>
         </section>
