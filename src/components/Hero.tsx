@@ -28,13 +28,19 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button 
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins text-lg px-8 py-6 group"
+            <a 
+              href="https://dylan-lawrence.remax.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              Start Your Search
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <Button 
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins text-lg px-8 py-6 group"
+              >
+                Start Your Search
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
             <Button 
               size="lg"
               variant="outline"
