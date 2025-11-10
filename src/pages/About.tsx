@@ -167,12 +167,12 @@ const About = () => {
                   <span className="font-playfair text-2xl font-bold text-accent">2</span>
                 </div>
                 <h3 className="font-poppins font-semibold text-xl text-foreground">
-                  Relocating Families
+                  Single Women & Moms
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
-                  Moving to Tampa Bay from out of state? I'll be your trusted local 
-                  guide, helping you find the perfect neighborhood, schools, and 
-                  community for your family.
+                  Women buying on their own and single parents ready to build stability 
+                  and create lasting security. I've walked this path myself — I understand 
+                  the unique challenges and will guide you with clarity and care.
                 </p>
               </div>
 
@@ -181,11 +181,12 @@ const About = () => {
                   <span className="font-playfair text-2xl font-bold text-accent">3</span>
                 </div>
                 <h3 className="font-poppins font-semibold text-xl text-foreground">
-                  Investors & Sellers
+                  Relocating Families
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
-                  Design-minded clients who appreciate presentation, staging, and 
-                  strategy. Let's maximize your ROI and make your property shine.
+                  Moving to Tampa Bay from out of state? I'll be your trusted local 
+                  guide, helping you find the perfect neighborhood, schools, and 
+                  community for your family.
                 </p>
               </div>
             </div>
