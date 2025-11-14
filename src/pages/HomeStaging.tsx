@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Eye, TrendingUp, Clock, Heart, Sparkles, Users } from "lucide-react";
-import stagingSideBySide from "@/assets/staging-side-by-side.jpg";
 
 const HomeStaging = () => {
   return (
@@ -36,26 +35,6 @@ const HomeStaging = () => {
           </div>
         </section>
 
-        {/* Before/After Image */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground text-center mb-8">
-                The Power of Staging
-              </h2>
-              <div className="rounded-2xl overflow-hidden shadow-lifted">
-                <img 
-                  src={stagingSideBySide} 
-                  alt="Before and after home staging transformation showing dramatic improvement from cluttered to professionally styled"
-                  className="w-full h-auto"
-                />
-              </div>
-              <p className="font-poppins text-center text-muted-foreground italic mt-6">
-                Small changes create dramatic results
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Why Staging Matters */}
         <section className="py-20 lg:py-32 bg-background">
