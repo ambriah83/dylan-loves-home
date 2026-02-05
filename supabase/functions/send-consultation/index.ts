@@ -200,7 +200,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("User confirmation email sent successfully");
 
-    // Send lead to Follow Up Boss CRM
+    // Send lead to Follow Up Boss CRM via Events API
     if (FOLLOWUP_BOSS_API_KEY) {
       try {
         // Determine tags based on consultation type
@@ -212,37 +212,47 @@ const handler = async (req: Request): Promise<Response> => {
           tags.push("Buyer Lead");
         }
 
-        // Create the person in Follow Up Boss
-        const fubResponse = await fetch("https://api.followupboss.com/v1/people", {
+        // Determine event type based on consultation type
+        let eventType = "General Inquiry";
+        if (consultationType === "selling") {
+          eventType = "Seller Inquiry";
+        } else if (consultationType === "buying") {
+          eventType = "Property Inquiry";
+        }
+
+        // Build the description
+        let description = `Consultation Type: ${consultationTypeDisplay}`;
+        if (propertyAddress) {
+          description += `\nProperty Address: ${propertyAddress}`;
+        }
+        if (message) {
+          description += `\n\nMessage:\n${message}`;
+        }
+
+        // Create the event in Follow Up Boss (this triggers automations)
+        const fubResponse = await fetch("https://api.followupboss.com/v1/events", {
           method: "POST",
           headers: {
             "Authorization": `Basic ${btoa(FOLLOWUP_BOSS_API_KEY + ":")}`,
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            firstName: name.split(" ")[0],
-            lastName: name.split(" ").slice(1).join(" ") || "",
-            emails: [{ value: email, isPrimary: true }],
-            phones: [{ value: phone, isPrimary: true }],
-            tags: tags,
             source: "dylansellsfloridahomes.com",
-            ...(propertyAddress && {
-              addresses: [{ 
-                value: propertyAddress, 
-                type: "home" 
-              }]
-            }),
-            ...(message && {
-              notes: [{
-                subject: `Consultation Request - ${consultationTypeDisplay}`,
-                body: message
-              }]
-            }),
+            type: eventType,
+            message: message || "",
+            description: description,
+            person: {
+              firstName: name.split(" ")[0],
+              lastName: name.split(" ").slice(1).join(" ") || "",
+              emails: [{ value: email, isPrimary: true }],
+              phones: [{ value: phone, isPrimary: true }],
+              tags: tags,
+            },
           }),
         });
 
         if (fubResponse.ok) {
-          console.log("Lead successfully sent to Follow Up Boss");
+          console.log("Lead successfully sent to Follow Up Boss via Events API");
         } else {
           const errorData = await fubResponse.text();
           console.error("Follow Up Boss API error:", fubResponse.status, errorData);
