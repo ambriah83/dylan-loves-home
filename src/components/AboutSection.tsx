@@ -1,7 +1,7 @@
 import { Heart, Home, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import dylanPortrait from "@/assets/dylan-headshot.jpg";
+import dylanPortrait from "@/assets/dylan-headshot-new.png";
 
 const AboutSection = () => {
   const values = [
