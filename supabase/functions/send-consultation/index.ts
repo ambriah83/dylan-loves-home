@@ -4,6 +4,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const FOLLOWUP_BOSS_API_KEY = Deno.env.get("FOLLOWUP_BOSS_API_KEY");
 
 // Initialize Supabase client for rate limiting
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
@@ -198,6 +199,61 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     console.log("User confirmation email sent successfully");
+
+    // Send lead to Follow Up Boss CRM
+    if (FOLLOWUP_BOSS_API_KEY) {
+      try {
+        // Determine tags based on consultation type
+        const tags: string[] = ["Website Lead"];
+        if (consultationType === "selling" || consultationType === "both") {
+          tags.push("Seller Lead");
+        }
+        if (consultationType === "buying" || consultationType === "both") {
+          tags.push("Buyer Lead");
+        }
+
+        // Create the person in Follow Up Boss
+        const fubResponse = await fetch("https://api.followupboss.com/v1/people", {
+          method: "POST",
+          headers: {
+            "Authorization": `Basic ${btoa(FOLLOWUP_BOSS_API_KEY + ":")}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: name.split(" ")[0],
+            lastName: name.split(" ").slice(1).join(" ") || "",
+            emails: [{ value: email, isPrimary: true }],
+            phones: [{ value: phone, isPrimary: true }],
+            tags: tags,
+            source: "dylansellsfloridahomes.com",
+            ...(propertyAddress && {
+              addresses: [{ 
+                value: propertyAddress, 
+                type: "home" 
+              }]
+            }),
+            ...(message && {
+              notes: [{
+                subject: `Consultation Request - ${consultationTypeDisplay}`,
+                body: message
+              }]
+            }),
+          }),
+        });
+
+        if (fubResponse.ok) {
+          console.log("Lead successfully sent to Follow Up Boss");
+        } else {
+          const errorData = await fubResponse.text();
+          console.error("Follow Up Boss API error:", fubResponse.status, errorData);
+        }
+      } catch (fubError) {
+        console.error("Error sending to Follow Up Boss:", fubError);
+        // Don't fail the request if FUB fails - email was still sent
+      }
+    } else {
+      console.log("FOLLOWUP_BOSS_API_KEY not configured, skipping CRM sync");
+    }
 
     return new Response(
       JSON.stringify({
