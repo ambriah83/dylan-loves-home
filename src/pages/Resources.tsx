@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { FileDown, Home, Building2 } from "lucide-react";
+import { FileDown, Home, Building2, ExternalLink, DollarSign } from "lucide-react";
 
 const Resources = () => {
   const guides = [
@@ -77,6 +77,41 @@ const Resources = () => {
                   </Card>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Helpful Links Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
+              Helpful Links
+            </h2>
+            <div className="max-w-2xl mx-auto">
+              <Card className="p-8 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+                  <div className="text-accent">
+                    <DollarSign size={48} strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-playfair text-2xl font-bold text-foreground mb-2">
+                      Down Payment Assistance
+                    </h3>
+                    <p className="font-poppins text-muted-foreground leading-relaxed">
+                      Explore programs that can help you with your down payment and closing costs. See what you may qualify for.
+                    </p>
+                  </div>
+                  <Button 
+                    asChild
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground font-poppins whitespace-nowrap"
+                  >
+                    <a href="https://www.workforce-resource.com/dpr/pmt/MFRMLS/DYLAN_LAWRENCE" target="_blank" rel="noopener noreferrer">
+                      Learn More
+                      <ExternalLink className="ml-2" size={16} />
+                    </a>
+                  </Button>
+                </div>
+              </Card>
             </div>
           </div>
         </section>
