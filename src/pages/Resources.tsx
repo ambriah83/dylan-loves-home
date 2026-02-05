@@ -22,9 +22,6 @@ const Resources = () => {
     }
   ];
 
-  const handleDownload = (url: string) => {
-    window.open(url, '_blank');
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -68,11 +65,13 @@ const Resources = () => {
                       </p>
                       
                       <Button 
-                        onClick={() => handleDownload(guide.downloadUrl)}
+                        asChild
                         className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-poppins"
                       >
-                        <FileDown className="mr-2" size={20} />
-                        Download PDF Guide
+                        <a href={guide.downloadUrl} target="_blank" rel="noopener noreferrer">
+                          <FileDown className="mr-2" size={20} />
+                          Download PDF Guide
+                        </a>
                       </Button>
                     </div>
                   </Card>
