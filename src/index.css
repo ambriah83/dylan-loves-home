@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --secondary-foreground: 30 15% 25%;
 
     /* Olive Green - Accent from Kitchen Cabinets */
-    --accent: 80 28% 42%;
+    --accent: 78 32% 34%;
     --accent-foreground: 0 0% 98%;
 
     /* Muted Charcoal - Deep Accent */
@@ -43,7 +43,7 @@ All colors MUST be HSL.
 
     --border: 80 15% 85%;
     --input: 80 15% 88%;
-    --ring: 80 28% 42%;
+    --ring: 78 32% 34%;
 
     --radius: 0.75rem;
     
