@@ -26,32 +26,32 @@ All colors MUST be HSL.
     --secondary: 30 15% 75%;
     --secondary-foreground: 30 15% 25%;
 
-    /* Olive Green - Accent from Kitchen Cabinets */
-    --accent: 78 32% 34%;
+    /* Hunter Green - Accent */
+    --accent: 150 35% 25%;
     --accent-foreground: 0 0% 98%;
 
     /* Muted Charcoal - Deep Accent */
     --rose: 200 10% 35%;
     --rose-foreground: 0 0% 100%;
 
-    /* Light Olive Background */
-    --muted: 80 18% 92%;
-    --muted-foreground: 30 10% 40%;
+    /* Light Hunter Green Background */
+    --muted: 150 12% 92%;
+    --muted-foreground: 150 10% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 80 15% 85%;
-    --input: 80 15% 88%;
-    --ring: 78 32% 34%;
+    --border: 150 12% 85%;
+    --input: 150 12% 88%;
+    --ring: 150 35% 25%;
 
     --radius: 0.75rem;
     
     /* Custom Design Tokens */
-    --gradient-coastal: linear-gradient(135deg, hsl(80 28% 42% / 0.2), hsl(35 30% 88% / 0.3));
-    --gradient-hero: linear-gradient(to bottom, hsl(80 28% 30% / 0.4), hsl(30 20% 20% / 0.5), hsl(36 25% 97% / 0.9));
-    --shadow-soft: 0 4px 20px hsl(80 28% 30% / 0.1);
-    --shadow-lifted: 0 10px 40px hsl(80 28% 30% / 0.15);
+    --gradient-coastal: linear-gradient(135deg, hsl(150 35% 30% / 0.2), hsl(35 30% 88% / 0.3));
+    --gradient-hero: linear-gradient(to bottom, hsl(150 35% 20% / 0.4), hsl(30 20% 20% / 0.5), hsl(36 25% 97% / 0.9));
+    --shadow-soft: 0 4px 20px hsl(150 35% 20% / 0.1);
+    --shadow-lifted: 0 10px 40px hsl(150 35% 20% / 0.15);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -87,24 +87,24 @@ All colors MUST be HSL.
     --secondary: 30 12% 25%;
     --secondary-foreground: 36 25% 95%;
 
-    --accent: 80 28% 38%;
+    --accent: 150 35% 30%;
     --accent-foreground: 0 0% 98%;
 
     --rose: 200 10% 40%;
     --rose-foreground: 0 0% 100%;
 
-    --muted: 80 12% 22%;
-    --muted-foreground: 35 15% 70%;
+    --muted: 150 12% 22%;
+    --muted-foreground: 150 15% 70%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 36 25% 95%;
 
-    --border: 80 12% 28%;
-    --input: 80 12% 28%;
-    --ring: 80 28% 38%;
+    --border: 150 12% 28%;
+    --input: 150 12% 28%;
+    --ring: 150 35% 30%;
     
-    --gradient-coastal: linear-gradient(135deg, hsl(80 28% 35% / 0.3), hsl(35 20% 30% / 0.3));
-    --gradient-hero: linear-gradient(to bottom, hsl(80 28% 15% / 0.5), hsl(200 15% 12% / 0.8), hsl(200 15% 12%));
+    --gradient-coastal: linear-gradient(135deg, hsl(150 35% 25% / 0.3), hsl(35 20% 30% / 0.3));
+    --gradient-hero: linear-gradient(to bottom, hsl(150 35% 15% / 0.5), hsl(200 15% 12% / 0.8), hsl(200 15% 12%));
     --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
     --shadow-lifted: 0 10px 40px hsl(0 0% 0% / 0.4);
   }
