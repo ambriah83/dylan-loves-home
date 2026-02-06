@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Award, Briefcase, GraduationCap, Heart } from "lucide-react";
 import dylanPortrait from "@/assets/dylan-portrait.jpg";
 import dylansFamily from "@/assets/dylans-family.jpg";
+import dylanLifestyle from "@/assets/dylan-lifestyle.jpg";
 
 const About = () => {
   return (
@@ -64,19 +65,30 @@ const About = () => {
         {/* My Promise */}
         <section className="py-20 lg:py-32 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground">
-                My Promise to You
-              </h2>
-              <p className="font-playfair text-2xl italic text-accent">
-                "I'm here to help you move with purpose — not pressure."
-              </p>
-              <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
-                I believe in education, communication, and empowerment. I'll walk you 
-                through every step, answer every question, and make sure you feel 
-                confident in your decisions. My goal isn't just to help you buy or 
-                sell a house — it's to help you find home.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+              <div className="space-y-8">
+                <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground">
+                  My Promise to You
+                </h2>
+                <p className="font-playfair text-2xl italic text-accent">
+                  "I'm here to help you move with purpose — not pressure."
+                </p>
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  I believe in education, communication, and empowerment. I'll walk you 
+                  through every step, answer every question, and make sure you feel 
+                  confident in your decisions. My goal isn't just to help you buy or 
+                  sell a house — it's to help you find home.
+                </p>
+              </div>
+              <div className="relative">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lifted">
+                  <img
+                    src={dylanLifestyle}
+                    alt="Dylan Lawrence - Tampa Bay Realtor"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
