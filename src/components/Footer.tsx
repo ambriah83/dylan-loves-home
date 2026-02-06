@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Linkedin, Mail, Phone, Star } from "lucide-react";
+import logo from "@/assets/dylan-lawrence-logo-transparent.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-playfair text-2xl font-bold">Dylan Lawrence</h3>
+            <img 
+              src={logo} 
+              alt="Dylan Lawrence Real Estate Agent" 
+              className="h-20 w-auto"
+            />
             <p className="font-poppins text-sm text-foreground leading-relaxed">
               Tampa Bay Realtor® making real estate beautiful and simple.
             </p>
