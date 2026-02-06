@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import logo from "@/assets/dylan-lawrence-logo-transparent.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,10 +47,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="font-playfair text-2xl font-semibold text-foreground">
-              Dylan Lawrence
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Dylan Lawrence Real Estate Agent" 
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
