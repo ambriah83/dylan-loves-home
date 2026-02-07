@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <img 
-              src={logo} 
-              alt="Dylan Lawrence Real Estate Agent" 
-              className="h-20 w-auto"
+            <img
+              src={logo}
+              alt="Dylan Lawrence Real Estate Agent"
+              className="h-24 w-auto"
             />
             <p className="font-poppins text-sm text-foreground leading-relaxed">
               Tampa Bay Realtor® making real estate beautiful and simple.

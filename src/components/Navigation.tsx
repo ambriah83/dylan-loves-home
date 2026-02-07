@@ -48,10 +48,10 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
-              src={logo} 
-              alt="Dylan Lawrence Real Estate Agent" 
-              className="h-14 w-auto"
+            <img
+              src={logo}
+              alt="Dylan Lawrence Real Estate Agent"
+              className="h-16 w-auto"
             />
           </Link>
 
