@@ -5,6 +5,7 @@ import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import OrangeBlossomDivider from "@/components/OrangeBlossomDivider";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <main>
         <Hero />
         <AboutSection />
+        <OrangeBlossomDivider />
         <Testimonials />
         <ContactSection />
         <CTASection />
