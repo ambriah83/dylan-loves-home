@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Linkedin, Mail, Phone } from "lucide-react";
 import logo from "@/assets/dylan-lawrence-logo-transparent.png";
-import remaxLogo from "@/assets/remax-logo.jpg";
+import homerunLogo from "@/assets/homerun-team-logo.jpg";
 
 const Footer = () => {
   return (
@@ -110,7 +110,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-poppins text-foreground/80">
             <div className="text-center md:text-left">
               <p className="mb-2">
-                Dylan Lawrence | RE/MAX Realtec Group | Palm Harbor, Florida | License #SL3518205
+                Dylan Lawrence | The Home Run Team of Tampa Bay | Powered by The Wilkins Way | License #SL3518205
               </p>
               <p>
                 Equal Housing Opportunity. All information provided is deemed reliable but is not 
@@ -118,9 +118,9 @@ const Footer = () => {
               </p>
             </div>
             <img 
-              src={remaxLogo} 
-              alt="RE/MAX Realtec Group" 
-              className="h-10 w-auto"
+              src={homerunLogo} 
+              alt="The Home Run Team of Tampa Bay" 
+              className="h-12 w-auto"
             />
           </div>
         </div>
