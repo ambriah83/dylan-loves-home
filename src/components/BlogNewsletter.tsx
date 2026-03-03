@@ -26,27 +26,29 @@ const BlogNewsletter = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase
-        .from('newsletter_subscribers')
-        .insert([{ email: data.email }]);
+      const { data: response, error } = await supabase.functions.invoke("subscribe-newsletter", {
+        body: { email: data.email },
+      });
 
       if (error) {
-        if (error.code === '23505') {
-          toast({
-            title: "Already subscribed",
-            description: "This email is already subscribed to our newsletter.",
-            variant: "destructive",
-          });
-        } else {
-          throw error;
-        }
-      } else {
-        toast({
-          title: "Successfully subscribed!",
-          description: "You'll receive our latest real estate insights and tips.",
-        });
-        reset();
+        throw error;
       }
+
+      // Check for already_subscribed response
+      if (response?.error === "already_subscribed") {
+        toast({
+          title: "Already subscribed",
+          description: "This email is already subscribed to our newsletter.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      toast({
+        title: "Successfully subscribed!",
+        description: "You'll receive our latest real estate insights and tips.",
+      });
+      reset();
     } catch (error) {
       console.error("Newsletter subscription error:", error);
       toast({
