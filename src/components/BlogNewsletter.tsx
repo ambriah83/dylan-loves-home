@@ -50,7 +50,9 @@ const BlogNewsletter = () => {
       });
       reset();
     } catch (error) {
-      console.error("Newsletter subscription error:", error);
+      if (import.meta.env.DEV) {
+        console.error("Newsletter subscription error:", error);
+      }
       toast({
         title: "Subscription failed",
         description: "Please try again later.",
