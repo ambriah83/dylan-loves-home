@@ -120,7 +120,7 @@ const Footer = () => {
             <img 
               src={homerunLogo} 
               alt="The Home Run Team of Tampa Bay" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </div>
         </div>
