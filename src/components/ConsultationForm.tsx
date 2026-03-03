@@ -55,7 +55,9 @@ export default function ConsultationForm() {
       });
       reset();
     } catch (error) {
-      console.error("Error sending consultation:", error);
+      if (import.meta.env.DEV) {
+        console.error("Error sending consultation:", error);
+      }
       toast({
         title: "Error",
         description: "Failed to send your request. Please try again or contact us directly.",
