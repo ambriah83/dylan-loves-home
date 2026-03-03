@@ -282,8 +282,8 @@ const handler = async (req: Request): Promise<Response> => {
     console.error("Error in send-consultation function:", error);
     return new Response(
       JSON.stringify({
-        error: error.message,
-        details: "Failed to send consultation request",
+        error: "Unable to process request",
+        details: "Failed to send consultation request. Please try again or contact us directly.",
       }),
       {
         status: 500,
